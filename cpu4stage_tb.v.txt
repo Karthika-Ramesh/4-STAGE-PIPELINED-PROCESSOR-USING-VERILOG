@@ -1,0 +1,35 @@
+//====================================================
+// Testbench for 4-Stage Pipeline Processor
+//====================================================
+
+module cpu4stage_tb;
+
+    reg clk;
+    reg reset;
+
+    cpu4stage uut (
+        .clk(clk),
+        .reset(reset)
+    );
+
+    // Clock generation
+    always #5 clk = ~clk;
+
+    initial begin
+        clk = 0;
+        reset = 1;
+
+        #10 reset = 0;
+
+        #150;
+
+        $display("---- Register File Output ----");
+        $display("R1 = %d", uut.reg_file[1]);
+        $display("R2 = %d", uut.reg_file[2]);
+        $display("R3 = %d", uut.reg_file[3]);
+        $display("R4 = %d", uut.reg_file[4]);
+
+        $finish;
+    end
+
+endmodule
