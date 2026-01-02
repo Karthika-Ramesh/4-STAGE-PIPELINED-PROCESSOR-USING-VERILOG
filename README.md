@@ -48,5 +48,3 @@ The simulation demonstrates correct pipelined execution of a simple instruction 
 ## 🏁 Submission
 
 Project completed as Task 3 of CODTECH Internship — "Pipeline Processor Design in Verilog".
-
-⭐ Happy to help you with the next task too! 🚀
